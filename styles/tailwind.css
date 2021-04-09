@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  .vertical-rl {
+    writing-mode: vertical-rl;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap");
+
+body {
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+  display: grid;
+  font-family: "Nunito", sans-serif;
+  height: 100vh;
+  margin: 0;
+  place-items: center;
+}
