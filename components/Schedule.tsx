@@ -1,3 +1,5 @@
+import GlassBox from "@components/GlassBox";
+
 type task = {
   category: string;
   time: string;
@@ -21,17 +23,17 @@ function Schedule({ schedule }: ScheduleProps) {
             <div className="mt-8">
               {day.tasks.map((task) => {
                 return (
-                  <div className="flex h-20 mb-8 overflow-hidden rounded-2xl bg-red-50">
-                    <div className="p-2 text-center transform rotate-180 vertical-rl">
+                  <GlassBox className="flex h-20 mb-8 overflow-hidden cursor-pointer rounded-2xl">
+                    <div className="p-1 font-bold text-center text-white transform rotate-180 vertical-rl">
                       {task.category}
                     </div>
-                    <div className="flex flex-col w-full pl-3 bg-gray-400 justify-evenly rounded-l-2xl">
+                    <GlassBox className="flex flex-col w-full pl-3 justify-evenly rounded-l-2xl bg-opacity-20">
                       <span className="text-2xl font-bold">{task.time}</span>
                       <p className="pr-10 overflow-hidden whitespace-nowrap overflow-ellipsis">
                         {task.activity}
                       </p>
-                    </div>
-                  </div>
+                    </GlassBox>
+                  </GlassBox>
                 );
               })}
             </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import GlassBox from "./GlassBox";
 
 interface ListItemProps {
   item: {
@@ -9,11 +10,11 @@ interface ListItemProps {
 
 function ListItem({ item: { icon, text } }: ListItemProps) {
   return (
-    <div className="flex items-center">
-      <div className="mr-4 bg-white border border-black rounded-full">
-        <img src={icon} className="w-12" />
-      </div>
-      <p>{text}</p>
+    <div className="flex items-center cursor-pointer">
+      <GlassBox className="box-content flex-shrink-0 p-2 mr-2 rounded-full w-9">
+        <img src={icon} className="w-full h-full" />
+      </GlassBox>
+      <p className="flex-1">{text}</p>
     </div>
   );
 }

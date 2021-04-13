@@ -1,5 +1,6 @@
-import ListItem from "../components/ListItem";
-import Schedule from "../components/Schedule";
+import ListItem from "@components/ListItem";
+import Schedule from "@components/Schedule";
+import GlassBox from "@components/GlassBox";
 
 const listItems = [
   {
@@ -95,23 +96,23 @@ const schedule = [
 
 export default function Home() {
   return (
-    <div className="flex items-center w-screen h-screen">
-      <div className="grid w-4/5 grid-cols-5 gap-5 p-10 mx-auto border border-red-700 h-5/6">
-        <div className="p-5 border border-black">
+    <div className="flex items-center w-screen h-screen bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">
+      <GlassBox className="container flex w-full p-10 mx-auto space-x-12 h-5/6 rounded-2xl">
+        <GlassBox className="w-1/4 p-5 bg-white backdrop-filter backdrop-blur-sm rounded-2xl">
           <h2 className="mb-2 text-3xl font-bold">Objetivos</h2>
           <p className="mb-4">Lo que quiero lograr</p>
-          <ul>
+          <ul className="space-y-4">
             {listItems.map((item) => (
               <ListItem item={item} />
             ))}
           </ul>
-        </div>
-        <div className="col-span-4 p-5 ">
+        </GlassBox>
+        <GlassBox className="flex-1 p-5 rounded-2xl">
           <h1 className="mb-2 text-3xl font-bold">Planeador semanal</h1>
           <p className="mb-4">Semana del 15 al 19 de marzo</p>
           <Schedule schedule={schedule} />
-        </div>
-      </div>
+        </GlassBox>
+      </GlassBox>
     </div>
   );
 }
