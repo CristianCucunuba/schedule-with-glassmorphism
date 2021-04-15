@@ -15,7 +15,7 @@ interface ScheduleProps {
 
 function Schedule({ schedule }: ScheduleProps) {
   return (
-    <div className="grid grid-cols-5 gap-5">
+    <div className="grid grid-cols-1 gap-5 lg:grid-cols-5">
       {schedule.map((day) => {
         return (
           <div>

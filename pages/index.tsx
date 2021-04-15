@@ -96,9 +96,9 @@ const schedule = [
 
 export default function Home() {
   return (
-    <div className="flex items-center w-screen h-screen bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">
-      <GlassBox className="container flex w-full p-10 mx-auto space-x-12 h-5/6 rounded-2xl">
-        <GlassBox className="w-1/4 p-5 bg-white backdrop-filter backdrop-blur-sm rounded-2xl">
+    <div className="flex items-center w-screen lg:h-screen bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">
+      <GlassBox className="flex flex-col w-full p-10 mx-auto lg:flex-row md:my-10 lg:space-x-12 h-5/6 rounded-2xl md:max-w-7xl">
+        <GlassBox className="w-full p-5 mb-10 bg-white lg:mb-0 lg:w-1/4 backdrop-filter backdrop-blur-sm rounded-2xl">
           <h2 className="mb-2 text-3xl font-bold">Objetivos</h2>
           <p className="mb-4">Lo que quiero lograr</p>
           <ul className="space-y-4">
